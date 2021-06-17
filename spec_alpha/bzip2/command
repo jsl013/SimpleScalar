@@ -1,0 +1,12 @@
+bzip2 input.source 280 > bzip2.ref.source.out 2> bzip2.ref.source.err
+
+bzip2 chicken.jpg 30 > bzip2.ref.chicken.out 2> bzip2.ref.chicken.err
+
+bzip2 liberty.jpg 30 > bzip2.ref.liberty.out 2> bzip2.ref.liberty.err
+
+bzip2 input.program 280 > bzip2.ref.program.out 2> bzip2.ref.program.err
+
+bzip2 text.html 280 > bzip2.ref.text.out 2> bzip2.ref.text.err
+
+bzip2 input.combined 200 > bzip2.ref.combined.out 2> bzip2.ref.combined.err
+

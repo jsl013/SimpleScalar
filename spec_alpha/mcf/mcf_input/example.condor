@@ -1,0 +1,14 @@
+Executable = /home/hanul/simulators/simplescalar/mase-alphalinux-stall-simpoint/sim-outorder
+Universe = standard
+output = simpoint.out
+error = simpoint.error
+Log = simpoint.log
+
+arguments = -simpoint:file simpoint.txt \
+-frontend 5 -sim 999 \
+-cache:il1 il1:256:32:1:l -cache:dl1 dl1:128:32:4:l -cache:il2 dl2 -cache:dl2 ul2:1024:128:8:l \
+-issue:width 8 -fetch:ifqsize 64 -fetch:speed 2 -decode:width 4 -commit:width 4 -ruu:size 128 -lsq:size 64 \
+-mem:lat 100 10 -tlb:lat 200 -cache:il2lat 9 -cache:dl2lat 9 -bpred comb -bpred:2lev 1 1024 10 1 \
+mcf_base.alpha inp.in
+
+Queue
